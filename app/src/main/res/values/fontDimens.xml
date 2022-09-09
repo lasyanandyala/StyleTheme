@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name = "fontSize">30sp</dimen>
+    <dimen name = "fontLarger">60sp</dimen>
+    <dimen name = "fontSmaller">20sp</dimen>
+</resources>
