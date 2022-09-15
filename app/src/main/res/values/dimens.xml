@@ -2,4 +2,10 @@
 <resources>
     <dimen name = "buttonWidth">180dp</dimen>
     <dimen name = "buttonHeight">50dp</dimen>
+
+    //dimens for padding and margins
+    <dimen name = "screenPadding">100dp</dimen>
+    <dimen name = "screenPaddingBottom">3dp</dimen>
+    <dimen name = "screenMargin">113dp</dimen>
+
 </resources>

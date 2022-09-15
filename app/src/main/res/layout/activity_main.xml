@@ -7,37 +7,47 @@
     android:background="@color/secondaryColor"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button"
+    <RadioButton
+        android:id="@+id/buttonDog"
         android:layout_width="@dimen/buttonWidth"
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginStart="4dp"
         android:layout_marginBottom="16dp"
         android:hint="Dog"
+        android:paddingLeft="@dimen/screenPadding"
+        android:paddingRight="@dimen/screenPadding"
+        android:paddingBottom="@dimen/screenPaddingBottom"
         android:textStyle="italic"
         android:theme="@style/ButtonStyle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/button2"
+    <RadioButton
+        android:id="@+id/buttonCat"
         android:layout_width="@dimen/buttonWidth"
         android:layout_height="@dimen/buttonHeight"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="16dp"
+        android:paddingLeft="@dimen/screenPadding"
+        android:paddingRight="@dimen/screenPadding"
+        android:paddingBottom="@dimen/screenPaddingBottom"
         android:hint="Cat"
         android:textStyle="italic"
         android:theme="@style/ButtonStyle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
-        android:id="@+id/button3"
+    <RadioButton
+        android:id="@+id/buttonFish"
         android:layout_width="@dimen/buttonWidth"
         android:layout_height="@dimen/buttonHeight"
         android:hint="Fish"
+        android:onClick="good"
         android:textStyle="italic"
         android:theme="@style/ButtonStyle"
+        android:paddingLeft="@dimen/screenPadding"
+        android:paddingRight="@dimen/screenPadding"
+        android:paddingBottom="@dimen/screenPaddingBottom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -46,52 +56,78 @@
         app:layout_constraintVertical_bias="0.869" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/typeName"
         android:layout_width="@dimen/buttonWidth"
         android:layout_height="@dimen/buttonHeight"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="@dimen/screenMargin"
+        android:layout_marginLeft="@dimen/screenMargin"
         android:background="@color/primaryLightColor"
         android:ems="10"
+        android:gravity="center"
         android:hint="Type Name"
         android:inputType="textPersonName"
-        android:textAlignment="center"
         android:textAllCaps="true"
         android:textSize="@dimen/fontSize"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.176" />
+        app:layout_constraintVertical_bias="0.039" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
+        android:id="@+id/typeEmailView"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="@dimen/buttonHeight"
+        android:layout_below="@+id/typeName"
+        android:layout_marginLeft="@dimen/screenMargin"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="@dimen/screenMargin"
+        android:gravity="center"
         android:text="Type your email:"
-        android:textAlignment="center"
         android:textSize="@dimen/fontSmaller"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.588"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.267" />
+        app:layout_constraintTop_toBottomOf="@+id/typeName"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/editEmailAddress"
         android:layout_width="@dimen/buttonWidth"
         android:layout_height="@dimen/buttonHeight"
+        android:layout_marginLeft="@dimen/screenMargin"
+        android:layout_marginRight="@dimen/screenMargin"
         android:background="@color/primaryLightColor"
         android:ems="10"
-        android:inputType="textEmailAddress"
+        android:gravity="center"
         android:hint="Email"
-        android:textAlignment="center"
+        android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.662"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.318" />
+        app:layout_constraintTop_toBottomOf="@+id/typeEmailView"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_begin="-33dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.76" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
